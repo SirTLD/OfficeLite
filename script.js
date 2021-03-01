@@ -1,5 +1,7 @@
 let countDownDate = new Date('April 5, 2021').getTime();
 
+// document.getElementById('footer-timer').innerHTML = new Date('April, 5, 2021');
+
 let x = setInterval(function () {
   let now = new Date().getTime();
 
