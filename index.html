@@ -1,53 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
-<body> 
-  A simple solution to complex tasks is coming soon
 
-  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-  collaboration platform built with an intuitive interface to improve productivity.
+<body>
 
-  Get Started
+  <header>
+    <div class='container'>
+      <div class='hero-logo'><img src="/assets/shared/logo.svg" alt=""></div>
+      <div class='hero-chart'><img src="/assets/home/illustration-charts.svg" alt=""></div>
+      <div class='hero-title'>
+        <h1>A simple solution to complex tasks is coming soon</h1>
+        <p> Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
+          collaboration platform built with an intuitive interface to improve productivity.</p>
+         <button class='btn cta-1' href='#'>Get Started</button>
+      </div>
+    </div>
+  </header>
 
-  Basic
-  Free
-  Up to 5 users for free
-  Basic document collaboration
-  2 gb storage
-  Great security and support
-  Try for Free
+  <main>
+    <section id='membership'>
+      <div class='membership-type'>
+        <div class='membership-type-card'>
+          <h3>Basic</h3>
+          <h1>Free</h1>
+          <span class='membership-type-card-info'>Up to 5 users for free</span>
+          <p> Basic document collaboration
+            <br>
+            2 gb storage
+            <br>
+            Great security and support
+          </p>
+          <button class='btn cta-2'>Try for Free</button>
+        </div>
 
-  Pro
-  $9.99
-  Per user, billed monthly
-  All essential integrations
-  50 gb storage
-  More control and insights
-  Try for Free
+        <div class='membership-type-card'>
+          <h3>Pro</h3>
+          <h1>$9.99</h1>
+          <span class='membership-type-card-info'>Per user, billed monthly</span>
+          <p>
+            All essential integrations
+            <br>
+            50 gb storage
+            <br>
+            More control and insights
+          </p>
+          <button class='btn cta-3'>Try for Free</button>
+        </div>
 
-  Ultimate
-  $19.99
-  Per user, billed monthly
-  Robust work management
-  100 gb storage
-  VIP support
-  Try for Free
+        <div class='membership-type-card'>
+          <h3>Ultimate</h3>
+          <h1>$19.99</h1>
+          <span class='membership-type-card-info'>Per user, billed monthly</span>
+          <p>
+            Robust work management
+            <br>
+            100 gb storage
+            <br>
+            VIP support
+          </p>
+          <button class='btn cta-2'>Try for Free</button>
+        </div>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+      </div>
+    </section>
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-  Get Started
+
+    <footer id='footer'>
+      <div class='footer-info'>
+        <p>Coming<span id='footer-timer'> April 5, 2021</span></p>
+        <div class='footer-countdown'>
+          <div class='footer-countdown-item'><span id='countdown-days'></span> <br> Days</div>
+          <div class='footer-countdown-item'><span id='countdown-hours'></span> <br>Hours</div>
+          <div class='footer-countdown-item'><span id='countdown-minutes'></span><br> Min</div>
+          <div class='footer-countdown-item'><span id='countdown-seconds'></span><br>Sec</div>
+        </div>
+        <button class='btn cta-1'>Get Started</button>
+      </div>
+
+      <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+
+
+      <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+
+    </footer>
+  </main>
+  <script src="/script.js"></script>
 </body>
 </html>
