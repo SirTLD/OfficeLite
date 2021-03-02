@@ -392,4 +392,70 @@ header .container .hero-title p {
   color: #fff;
   font-size: 32px;
 }
+
+.form-input-section {
+  border-radius: 10px;
+  height: 485px;
+  margin: 0 auto;
+  background-color: white;
+  width: 80%;
+  margin: 64px auto 87px auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.form-input-section form {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  padding: 24px 24px;
+}
+
+.form-input-section input {
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 18px auto;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #747B95;
+  outline: none;
+}
+
+.form-input-section select {
+  margin: 20px auto;
+  background-color: #fff;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+}
+
+.form-input-section select p {
+  color: #333950;
+  font-weight: 700;
+}
+
+.form-input-section select p span {
+  color: #747B95;
+}
+
+.form-input-section .btn-cta {
+  width: 100%;
+  margin: 0 auto;
+  margin: 20px auto;
+  font-weight: 700;
+  height: 56px;
+  color: #fff;
+  background-color: #5175ff;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border: none;
+}
 /*# sourceMappingURL=styles.css.map */

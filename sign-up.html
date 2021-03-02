@@ -39,34 +39,48 @@
         </div>
       </div>
 
-      
+
       <div class='form-input-section'>
         <form action="#" method="GET">
           <div>
-            <label for="name">Name</label>
-            <input type="text" name='name' id='name' placeholder="Name">
+            <!-- <label for="name">Name</label> -->
+            <input type="text" name='name' id='name' placeholder="Name" required>
           </div>
           <div>
-            <label for="name">Email Address</label>
-            <input type="email" name='email' id='email' placeholder="Email Address">
+            <!-- <label for="name">Email Address</label> -->
+            <input type="email" name='email' id='email' placeholder="Email Address" required>
           </div>
-       
-        Basic Pack Free
-        Basic Pack Free
-        Pro Pack $9.99
-        Ultimate Pack $19.99
-        Phone Number
-        Company
-        Get on the list
+          <div>
+            <select name="Options" id="Option">
+              <option value="Basic Pack">
+                <p>Basic Pack <span>Free</span></p>
+              </option>
+              <option value="Pro Pack">
+                <p>Pro Pack <span>$9.99</span></p>
+              </option>
+              <option value="Ultimate Pack">
+                <p>Ultimate Pack <span>$19.99</span></p>
+              </option>
+            </select>
+          </div>
+          <div>
+            <!-- <label for="phone">Phone Number</label> -->
+            <input type="tel" name='phone' id='phone' placeholder='Phone Number' required>
+          </div>
+          <div>
+            <!-- <label for="company">Company</label> -->
+            <input type="text" name='company' id='company' placeholder="Company" required>
+          </div>
 
-      </form>
+          <button src='./sign-up.html' class='btn-cta'>Get on the list</button>
+           </form>
       </div>
-      
 
 
 
 
-     
+
+
   </main>
 
 
