@@ -1,0 +1,107 @@
+$blue-1 : #5175ff;
+$blue-2: #829CFF;
+$grey-1: #333950;
+$grey-2: #25293A;
+$grey-3: #747B95;
+$Red-1: #F05B5B;
+
+
+@mixin flexDirection ($direction) {
+    display: flex;
+    flex-direction: $direction
+}
+
+@mixin flex-x-position ($position) {
+    display: flex;
+    justify-content: $position;
+    justify-items: $position;
+}
+
+@mixin flex-y-position ($position) {
+    display: flex;
+    align-content: $position;
+    align-items: $position;
+    align-self: $position;
+}
+
+.hero-title-form {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+        color: $grey-1;
+    }
+
+    p {
+        padding: 24px;
+        line-height: 26px;
+        font-size: 16px;
+        color: $grey-3;
+    }
+}
+
+@mixin footer-form-section {
+    #footer-form {
+            .footer-info-form {
+            @include flexDirection(column);
+            p {
+                
+                text-align: center;
+                text-transform: uppercase;
+                color: $grey-2;
+                letter-spacing: 5px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            span {
+                text-transform: uppercase;
+                color: $blue-1;
+                letter-spacing: 5px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            .btn {
+                margin: auto 25%;
+                margin-bottom: 100px;
+            }
+
+            .footer-countdown-form {
+                padding-top: 46px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                -moz-column-gap: 13px;
+                column-gap: 13px;
+                @include flex-x-position(center);
+                padding-bottom: 40px;
+
+                .footer-countdown-item {
+                    padding-top: 15px;
+                    @include flexDirection(column);
+                    text-align: center;
+                    width: 72px;
+                    height: 92px;
+                    background-color: #dce2fd;
+                    color: $grey-3;
+                    text-transform: lowercase;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+
+                    span {
+                        color:$blue-1;
+                        font-size: 32px;
+
+                    }
+                }
+            }
+        }
+    }
+}

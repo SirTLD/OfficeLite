@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
-
+@import './signup.scss';
 
 $blue-1 : #5175ff;
 $blue-2: #829CFF;
@@ -220,6 +220,10 @@ header {
     }
 }
 
+
+ @include footer-form-section;
+
+
 #footer {
     position: absolute;
         background-color: $grey-2;
@@ -229,6 +233,7 @@ header {
         background-image: url('/assets/home/bg-pattern-footer.svg');
         background-repeat: none;
         background-size: cover;
+        
 
         .footer-info {
         position: absolute;
@@ -256,7 +261,7 @@ header {
         }
 
         .btn {
-            margin: 0 auto;
+            margin: auto 25%;
             margin-bottom: 100px;
         }
 

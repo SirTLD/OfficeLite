@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/styles.css">
 
-    <title>Frontend Mentor | Officelite coming soon site</title>
+  <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
+
 <body>
-  Work smarter. Save time.
+  <header>
+    <div class='container'>
+      <div class=background-image></div>
+      <a href="./index.html">
+        <div class='hero-logo'><img src="/assets/shared/logo.svg" alt=""></div>
+      </a>
+      <div class='hero-title-form'>
+        <h1>Work smarter. Save time.</h1>
+        <p> Easily manage your projects. Get on the list and receive in-app perks available only to
+          early subscribers. We are moving into final development and getting ready for official launch soon.
+        </p>
+      </div>
+    </div>
+  </header>
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+  <main>
+    <div id='footer-form'>
+      <div class='footer-info-form'>
+        <p>Coming<span id='footer-timer'> April 5, 2021</span></p>
+        <div class='footer-countdown-form'>
+          <div class='footer-countdown-item'><span id='countdown-days'></span> <br> Days</div>
+          <div class='footer-countdown-item'><span id='countdown-hours'></span> <br>Hours</div>
+          <div class='footer-countdown-item'><span id='countdown-minutes'></span><br> Min</div>
+          <div class='footer-countdown-item'><span id='countdown-seconds'></span><br>Sec</div>
+        </div>
+      </div>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+      
+      <div class='form-input-section'>
+        <form action="#" method="GET">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name='name' id='name' placeholder="Name">
+          </div>
+          <div>
+            <label for="name">Email Address</label>
+            <input type="email" name='email' id='email' placeholder="Email Address">
+          </div>
+       
+        Basic Pack Free
+        Basic Pack Free
+        Pro Pack $9.99
+        Ultimate Pack $19.99
+        Phone Number
+        Company
+        Get on the list
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
+      </form>
+      </div>
+      
 
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+
+
+
+     
+  </main>
+
+
+  <script src="/script.js"></script>
 </body>
+
 </html>
