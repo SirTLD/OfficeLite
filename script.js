@@ -22,3 +22,15 @@ let x = setInterval(function () {
     document.getElementById('footer-timer').innerHTML = 'Time is Now';
   }
 }, 1000);
+
+// let formTitle = document.getElementById('javascript-test');
+
+// if (window.location.href === 'http://127.0.0.1:5500/sign-up.html') {
+//   formTitle.innerHTML = 'Greatness';
+// }
+
+let tablet = matchMedia('(max-width: 700px)');
+
+tablet.addEventListener('change', (e) => {
+  console.log(e);
+});

@@ -86,90 +86,318 @@ body {
 }
 
 
+@media screen and (min-width: 325px) and (max-width: 480px) {
+    header {
+        .container {
+            position: relative;
+            @include flex-x-position(center);
+            @include flexDirection(column);
 
-header {
+            .background-image {
+                background-image: url('/assets/home/bg-pattern-header.svg');
+                background-repeat: none;
+                position: absolute;
+                width: 450px;
+                height: 450px;
+                left: -250px;
+                top: -250px;
 
-    .container {
+            }
+
+            .hero-logo {
+                padding-top: 46px;
+                @include flex-x-position(center);
+            }
+
+            .mobile-chart {
+                @include flex-x-position(center);
+                z-index: 3;
+
+                img {
+                    padding-top: 80px;
+                    width: 60%;
+                }
+            }
+
+            .tablet-chart {
+                display: none;
+            }
+
+
+            .hero-title {
+                padding-top: 64px;
+                padding-bottom: 80px;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+
+                h1 {
+                    font-size: 40px;
+                    color: $grey-1;
+                }
+
+                p {
+                    padding: 24px;
+                    line-height: 26px;
+                    font-size: 16px;
+                    color: $grey-3;
+                }
+            }
+        }
+    }
+
+    #membership-mobile {
+
         position: relative;
-        @include flex-x-position(center);
-        @include flexDirection(column);
+        z-index: 5;
 
-        .background-image {
-            background-image: url('/assets/home/bg-pattern-header.svg');
+        .footer-background {
+            background-image: url('/assets/home/bg-pattern-footer.svg');
             background-repeat: none;
             position: absolute;
-            width: 450px;
-            height: 450px;
-            left: -250px;
-            top: -250px;
-
+            z-index: 4;
         }
+
+        .membership-type {
+
+            .membership-type-card {
+
+                @include flexDirection(column);
+                text-align: center;
+                width: 327px;
+                height: 508px;
+                background-color: #fff;
+
+                border-radius: 13px;
+                margin: 50px auto 5px;
+                -webkit-border-radius: 13px;
+                -moz-border-radius: 13px;
+                -ms-border-radius: 13px;
+                -o-border-radius: 13px;
+
+                h1,
+                h3 {
+                    color: $grey-2;
+                }
+
+                h1 {
+                    font-size: 56px;
+                    padding-top: 40px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    padding-top: 40px;
+                }
+
+                .membership-type-card-info {
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-top: 8px;
+                }
+
+                p {
+                    padding-top: 50px;
+                    padding-bottom: 32px;
+                    color: $grey-3;
+                    line-height: 42px;
+                }
+            }
+
+            .btn {
+                margin: 0 auto;
+            }
+        }
+
+        .membership-type-card:nth-child(2) {
+
+            h1,
+            h3,
+            p,
+            span {
+                color: #fff;
+            }
+
+            background-color: $blue-1;
+            background-image: url('/assets/home/bg-pattern-pricing.svg');
+            background-position: center bottom;
+        }
+    }
+
+    #membership-tablet {
+        display: none;
+    }
+
+    @include footer-form-section;
+
+    #footer {
+        position: absolute;
+        background-color: $grey-2;
+        top: 1800px;
+        width: 100%;
+        height: 1248px;
+        background-image: url('/assets/home/bg-pattern-footer.svg');
+        background-repeat: none;
+        background-size: cover;
+
+
+        .footer-info {
+            position: absolute;
+            top: 792px;
+            left: 0;
+            right: 0;
+            @include flexDirection(column);
+
+            p {
+                padding-top: 100px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #fff;
+                letter-spacing: 5px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            span {
+                text-transform: uppercase;
+                color: $blue-1;
+                letter-spacing: 5px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            .btn {
+                margin: auto 25%;
+                margin-bottom: 100px;
+            }
+
+            .footer-countdown {
+                padding-top: 46px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                -moz-column-gap: 13px;
+                column-gap: 13px;
+                @include flex-x-position(center);
+                padding-bottom: 40px;
+
+                .footer-countdown-item {
+                    padding-top: 15px;
+                    @include flexDirection(column);
+                    text-align: center;
+                    width: 72px;
+                    height: 92px;
+                    background-color: $grey-1;
+                    color: $grey-3;
+                    text-transform: lowercase;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+
+                    span {
+                        color: #fff;
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+/* media query */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
 
         .hero-logo {
-            padding-top: 46px;
-            @include flex-x-position(center);
+            padding-top: 72px;
+            @include flex-x-position(start);
         }
 
-        .hero-chart {
-            @include flex-x-position(center);
-            z-index: 3;
+        .tablet {
+            padding-top: 104px;
+            display: flex;
+            justify-items: space-between;
+        }
 
-            img {
-                padding-top: 80px;
-                width: 60%;
-            }
+        .mobile-chart {
+            display: none;
         }
 
         .hero-title {
-            padding-top: 64px;
-            padding-bottom: 80px;
-            width: 90%;
-            margin: 0 auto;
-            text-align: center;
+            @include flexDirection(column);
+            @include flex-x-position(start);
+            width: 500px;
 
             h1 {
-                font-size: 40px;
                 color: $grey-1;
+                line-height: 48px;
+                font-size: 40px;
             }
 
             p {
-                padding: 24px;
-                line-height: 26px;
+                padding-top: 24px;
                 font-size: 16px;
+                line-height: 26px;
                 color: $grey-3;
+            }
+
+            .btn {
+                margin-top: 24px;
+            }
+        }
+
+        .tablet-chart {
+            @include flex-x-position(end);
+            @include flex-y-position(center);
+
+
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }
-}
 
-#membership {
-    position: relative;
-    z-index: 5;
-
-    .footer-background {
-        background-image: url('/assets/home/bg-pattern-footer.svg');
-        background-repeat: none;
-        position: absolute;
-        z-index: 4;
+    #membership-mobile {
+        display: none;
     }
 
-    .membership-type {
+.membership-tablet-container{
+   
+    @include flexDirection(row);
+}
+    
+    .membership-tablet {
+        margin: 0 auto;
+        @include flexDirection(row);
+        justify-content: space-between;
+        @include flex-y-position(center);
+        background-color: #fff;
+        width: 90%;
+        margin-top: 140px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
 
-        .membership-type-card {
-
+        .membership-type-card-tablet {
 
             @include flexDirection(column);
-            text-align: center;
-            width: 327px;
-            height: 508px;
-            background-color: #fff;
 
-            border-radius: 13px;
-            margin: 50px auto 5px;
-            -webkit-border-radius: 13px;
-            -moz-border-radius: 13px;
-            -ms-border-radius: 13px;
-            -o-border-radius: 13px;
+            text-align: center;
+            background-color: #fff;
+            height: 290px;
+            padding-left: 48px;
 
             h1,
             h3 {
@@ -178,34 +406,41 @@ header {
 
             h1 {
                 font-size: 56px;
-                padding-top: 40px;
+                padding-top: 16px;
             }
 
             h3 {
                 font-size: 20px;
-                padding-top: 40px;
+                padding-top: 48px;
             }
 
-            .membership-type-card-info {
-                font-size: 16px;
-                font-weight: 400;
-                padding-top: 8px;
-            }
+        }
 
-            p {
-                padding-top: 50px;
-                padding-bottom: 32px;
-                color: $grey-3;
-                line-height: 42px;
-            }
+        .membership-type-card-info-tablet {
+            font-size: 16px;
+            font-weight: 400;
+            padding-top: 8px;
+        }
+
+        span {
+            padding-top: 4px;
+        }
+
+        p {
+            padding-top: 50px;
+            padding-bottom: 32px;
+            color: $grey-3;
+            line-height: 42px;
+            padding-right: 68px;
         }
 
         .btn {
-            margin: 0 auto;
+            margin-top: 24px;
+
         }
     }
 
-    .membership-type-card:nth-child(2) {
+    .membership-tablet-container:nth-child(2) {
 
         h1,
         h3,
@@ -218,157 +453,5 @@ header {
         background-image: url('/assets/home/bg-pattern-pricing.svg');
         background-position: center bottom;
     }
-}
 
-@include footer-form-section;
-
-#footer {
-    position: absolute;
-    background-color: $grey-2;
-    top: 1800px;
-    width: 100%;
-    height: 1248px;
-    background-image: url('/assets/home/bg-pattern-footer.svg');
-    background-repeat: none;
-    background-size: cover;
-
-
-    .footer-info {
-        position: absolute;
-        top: 792px;
-        left: 0;
-        right: 0;
-        @include flexDirection(column);
-
-        p {
-            padding-top: 100px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #fff;
-            letter-spacing: 5px;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        span {
-            text-transform: uppercase;
-            color: $blue-1;
-            letter-spacing: 5px;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        .btn {
-            margin: auto 25%;
-            margin-bottom: 100px;
-        }
-
-        .footer-countdown {
-            padding-top: 46px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            -moz-column-gap: 13px;
-            column-gap: 13px;
-            @include flex-x-position(center);
-            padding-bottom: 40px;
-
-            .footer-countdown-item {
-                padding-top: 15px;
-                @include flexDirection(column);
-                text-align: center;
-                width: 72px;
-                height: 92px;
-                background-color: $grey-1;
-                color: $grey-3;
-                text-transform: lowercase;
-                border-radius: 5px;
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                -ms-border-radius: 5px;
-                -o-border-radius: 5px;
-
-                span {
-                    color: #fff;
-                    font-size: 32px;
-                }
-            }
-        }
-    }
-}
-
-.form-input-section {
-    border-radius: 10px;
-    height: 485px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    
-    width: 80%;
-    margin: 64px auto 87px auto;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-
-    form {
-        width: 90%;
-        margin: 0 auto;
-        border: none;
-        padding: 24px 24px;        
-    }
-
-    input {
-        width: 100%;
-        padding-bottom: 20px;
-        margin: 18px auto;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 1px solid $grey-3;
-        outline: none;
-    }
-
-    select {
-        margin: 20px auto;
-        background-color: #fff;
-        width: 100%;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        outline: none;
-        p {
-            color: $grey-1;
-            font-weight: 700;
-            span {
-                color: $grey-3;
-            }
-        }
-    }
-
-    .btn-cta {
-        width: 100%;
-        margin: 0 auto;
-        margin: 20px auto;
-        font-weight: 700;
-        height: 56px;
-        color: #fff;
-        background-color: $blue-1;
-        border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
-        border: none;
-    }
-
-}
-
-.form-footer-background {
-    z-index: -5;
-    top: 1000px;
-    background-color: $grey-2;
-    width: 100%;
-    height: 320px;
-    position: absolute;
-    background-image: url('/assets/home/bg-pattern-footer.svg');
-    background-size: cover;
 }

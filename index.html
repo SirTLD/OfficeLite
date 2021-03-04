@@ -16,19 +16,21 @@
     <div class='container'>
       <div class=background-image></div>
       <div class='hero-logo'><img src="/assets/shared/logo.svg" alt=""></div>
-      <div class='hero-chart'><img src="/assets/home/illustration-charts.svg" alt=""></div>
-      <div class='hero-title'>
-        <h1>A simple solution to complex tasks is coming soon</h1>
-        <p> Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
-          collaboration platform built with an intuitive interface to improve productivity.</p>
+      <div class='tablet'>
+        <div class='mobile-chart'><img src="/assets/home/illustration-charts.svg" alt=""></div>
+        <div class='hero-title'>
+          <h1>A simple solution to complex tasks is coming soon</h1>
+          <p> Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
+            collaboration platform built with an intuitive interface to improve productivity.</p>
           <a href='./sign-up.html'><button class='btn cta-1'>Get Started</button></a>
-         </div>
+        </div>
+        <div class='tablet-chart'><img src="/assets/home/illustration-charts.svg" alt=""></div>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id='membership'>
-     
+    <section id='membership-mobile'>
       <div class='membership-type'>
         <div class='membership-type-card'>
           <h3>Basic</h3>
@@ -41,41 +43,106 @@
             Great security and support
           </p>
           <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
+        </div>       
+
+          <div class='membership-type-card'>
+            <h3>Pro</h3>
+            <h1>$9.99</h1>
+            <span class='membership-type-card-info'>Per user, billed monthly</span>
+            <p>
+              All essential integrations
+              <br>
+              50 gb storage
+              <br>
+              More control and insights
+            </p>
+            <a href='./sign-up.html'><button class='btn cta-3'>Try for Free</button></a>
+          </div>
+
+          <div class='membership-type-card'>
+            <h3>Ultimate</h3>
+            <h1>$19.99</h1>
+            <span class='membership-type-card-info'>Per user, billed monthly</span>
+            <p>
+              Robust work management
+              <br>
+              100 gb storage
+              <br>
+              VIP support
+            </p>
+            <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
+          </div>
+        </div>
+    </section>
+<!-- ---------------------------------------------------------------------- -->
+    <section id='membership-tablet'>
+
+      <div class='membership-tablet'>
+        
+        <div class='membership-tablet-container'>          
+          <div class='membership-type-card-tablet'>
+            <h3>Basic</h3>
+            <h1>Free</h1>
+            <span class='membership-type-card-info-tablet'>Up to 5 users for free</span>
+            <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
+          </div>
+            <div>
+              <p> Basic document collaboration
+                <br>
+                2 gb storage
+                <br>
+                Great security and support
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class='membership-type-card'>
-          <h3>Pro</h3>
-          <h1>$9.99</h1>
-          <span class='membership-type-card-info'>Per user, billed monthly</span>
-          <p>
-            All essential integrations
-            <br>
-            50 gb storage
-            <br>
-            More control and insights
-          </p>
-          <a href='./sign-up.html'><button class='btn cta-3'>Try for Free</button></a>
+        <div class='membership-tablet-container'>
+          <div class='membership-tablet'>
+            <div class='membership-type-card-tablet'>
+              <h3>Pro</h3>
+              <h1>$9.99</h1>
+              <span class='membership-type-card-info-tablet'>Per user, billed monthly</span>
+              <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
+            </div>
+              <div>
+                <p>
+                  All essential integrations
+                  <br>
+                  50 gb storage
+                  <br>
+                  More control and insights
+                </p>
+              </div>
+            </div>
         </div>
 
-        <div class='membership-type-card'>
-          <h3>Ultimate</h3>
-          <h1>$19.99</h1>
-          <span class='membership-type-card-info'>Per user, billed monthly</span>
-          <p>
-            Robust work management
-            <br>
-            100 gb storage
-            <br>
-            VIP support
-          </p>
-          <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
-        </div>
 
-      </div>
+        <div class='membership-tablet-container'>
+          <div class='membership-tablet'>
+            <div class='membership-type-card-tablet'>
+              <h3>Ultimate</h3>
+            <h1>$19.99</h1>
+              <span class='membership-type-card-info-tablet'>Up to 5 users for free</span>
+              <a href='./sign-up.html'><button class='btn cta-2'>Try for Free</button></a>
+            </div>
+              <div>
+                <p>
+                  Robust work management
+                  <br>
+                  100 gb storage
+                  <br>
+                  VIP support
+                </p>
+              </div>
+            </div>
+        </div>
+                  
+
     </section>
 
 
-    <div id='footer'>      
+    <div id='footer'>
       <div class='footer-info'>
         <!-- <div class='footer-background'></div> -->
         <p>Coming<span id='footer-timer'> April 5, 2021</span></p>
@@ -90,4 +157,5 @@
   </main>
   <script src="/script.js"></script>
 </body>
+
 </html>
