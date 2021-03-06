@@ -155,21 +155,20 @@ header {
 
     .membership-type {
 
+        @include flexDirection(column);
+        text-align: center;
+        width: 327px;
+        height: 508px;
+        background-color: #fff;
+
+        border-radius: 13px;
+        margin: 50px auto 5px;
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        -ms-border-radius: 13px;
+        -o-border-radius: 13px;
+
         .membership-type-card {
-
-
-            @include flexDirection(column);
-            text-align: center;
-            width: 327px;
-            height: 508px;
-            background-color: #fff;
-
-            border-radius: 13px;
-            margin: 50px auto 5px;
-            -webkit-border-radius: 13px;
-            -moz-border-radius: 13px;
-            -ms-border-radius: 13px;
-            -o-border-radius: 13px;
 
             h1,
             h3 {
@@ -186,26 +185,31 @@ header {
                 padding-top: 40px;
             }
 
-            .membership-type-card-info {
+            span {
                 font-size: 16px;
                 font-weight: 400;
                 padding-top: 8px;
-            }
+                
+            }          
 
+        }
+        
+        .paragraph {
+            padding-top: 50px;
             p {
-                padding-top: 50px;
                 padding-bottom: 32px;
                 color: $grey-3;
                 line-height: 42px;
             }
         }
 
-        .btn {
+        
+        .button-cta {
             margin: 0 auto;
         }
     }
 
-    .membership-type-card:nth-child(2) {
+    .membership-type:nth-child(2) {
 
         h1,
         h3,
@@ -301,7 +305,7 @@ header {
     height: 485px;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    
+
     width: 80%;
     margin: 64px auto 87px auto;
     -webkit-border-radius: 10px;
@@ -313,7 +317,7 @@ header {
         width: 90%;
         margin: 0 auto;
         border: none;
-        padding: 24px 24px;        
+        padding: 24px 24px;
     }
 
     input {
@@ -335,9 +339,11 @@ header {
         border-left: 0;
         border-right: 0;
         outline: none;
+
         p {
             color: $grey-1;
             font-weight: 700;
+
             span {
                 color: $grey-3;
             }
@@ -371,4 +377,55 @@ header {
     position: absolute;
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-size: cover;
+}
+
+
+//media query for tablet
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    header {
+
+        .container {
+            margin: 0 auto;
+            width: 90%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 314px;
+            grid-template-areas:
+                'header-1 header-1'
+                'content-1 content-2'
+            ;
+            justify-content: space-between;
+        }
+
+        .hero-logo {
+            margin-left: 2.5%;
+            margin-top: 50px;
+            grid-area: header-1;
+            margin-right: auto;
+
+        }
+
+        .hero-chart {
+            grid-area: content-2;
+
+        }
+
+        .hero-title {
+            grid-area: content-1;
+
+        }
+    }
+
+    #membership {
+
+        @include flexDirection(column);
+        @include flex-x-position(flex-start);
+
+    }
+
 }
