@@ -26,9 +26,9 @@ $Red-1: #F05B5B;
 
 
 
-@mixin sign-up-css {
 
 
+@mixin mobile-form-section-queries-css{
 
     @media screen and (min-width: 300px) and (max-width: 480px) {
 
@@ -137,143 +137,195 @@ $Red-1: #F05B5B;
 
     }
 
+}
 
-    @media screen and (min-width: 481px) and (max-width: 768px) {
 
-        header {
-            .container {
-                margin: 0 auto;
-                width: 90%;
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                margin-top: 200px;
+    @mixin tablet-form-section-queries-css{
 
-                .hero-title-form {
+        @media screen and (min-width: 481px) and (max-width: 768px) {
 
-                    padding-top: 64px;
-                    padding-bottom: 64px;
-                    width: 90%;
+            header {
+                .container {
                     margin: 0 auto;
-                    text-align: center;
-
-                    h1 {
-                        font-size: 40px;
-                        color: $grey-1;
-                    }
-
-                    p {
-                        padding: 24px;
-                        line-height: 26px;
-                        font-size: 16px;
-                        color: $grey-3;
-                    }
-                }
-
-            }
-
-        }
-
-        #footer-form {
-
-            .footer-info-form {
-                @include flexDirection(column);
-
-                p {
-
-                    text-align: center;
-                    text-transform: uppercase;
-                    color: $grey-2;
-                    letter-spacing: 5px;
-                    font-weight: 700;
-                    font-size: 16px;
-                }
-
-                span {
-                    text-transform: uppercase;
-                    color: $blue-1;
-                    letter-spacing: 5px;
-                    font-weight: 700;
-                    font-size: 16px;
-                }
-
-                .form-input-section {
-                    // position: relative;
-                    
-                    width: 60%;
-                    background-color: green;
-                }
-
-                .btn {
-                    margin: auto 25%;
-                    margin-bottom: 100px;
-                }
-
-                .footer-countdown-form {
-                    padding-top: 46px;
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    -moz-column-gap: 13px;
-                    column-gap: 13px;
-                    @include flex-x-position(center);
-                    padding-bottom: 40px;
-
-                    .footer-countdown-item {
-                        padding-top: 15px;
-                        @include flexDirection(column);
+                    width: 90%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 200px;
+    
+                    .hero-title-form {
+    
+                        padding-top: 64px;
+                        padding-bottom: 64px;
+                        width: 90%;
+                        margin: 0 auto;
                         text-align: center;
-                        width: 72px;
-                        height: 92px;
-                        background-color: #dce2fd;
-                        color: $grey-3;
-                        text-transform: lowercase;
-                        border-radius: 5px;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        -ms-border-radius: 5px;
-                        -o-border-radius: 5px;
-
-                        span {
-                            color: $blue-1;
-                            font-size: 32px;
-
+    
+                        h1 {
+                            font-size: 40px;
+                            color: $grey-1;
+                        }
+    
+                        p {
+                            padding: 24px;
+                            line-height: 26px;
+                            font-size: 16px;
+                            color: $grey-3;
                         }
                     }
+    
                 }
-
-
-               
+    
             }
-        }
-
-        .design-body {
-
-            position: relative;            
-            // background-color: rgb(229, 255, 0);
-            width: 100%;
-            
-            height:480px;
-
-            .form-input-section {
-              position: relative;
-              z-index: 3;
-                width: 60%;
+    
+            #footer-form {
+    
+                .footer-info-form {
+                    @include flexDirection(column);
+    
+                    p {
+    
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $grey-2;
+                        letter-spacing: 5px;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+    
+                    span {
+                        text-transform: uppercase;
+                        color: $blue-1;
+                        letter-spacing: 5px;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+    
+                    .form-input-section {
+                        // position: relative;
+    
+                        width: 60%;
+                        background-color: green;
+                    }
+    
+                    .btn {
+                        margin: auto 25%;
+                        margin-bottom: 100px;
+                    }
+    
+                    .footer-countdown-form {
+                        padding-top: 46px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        -moz-column-gap: 13px;
+                        column-gap: 13px;
+                        @include flex-x-position(center);
+                        padding-bottom: 40px;
+    
+                        .footer-countdown-item {
+                            padding-top: 15px;
+                            @include flexDirection(column);
+                            text-align: center;
+                            width: 72px;
+                            height: 92px;
+                            background-color: #dce2fd;
+                            color: $grey-3;
+                            text-transform: lowercase;
+                            border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            -ms-border-radius: 5px;
+                            -o-border-radius: 5px;
+    
+                            span {
+                                color: $blue-1;
+                                font-size: 32px;
+    
+                            }
+                        }
+                    }
+    
+                }
             }
-        }
-
-        .form-footer-background {
-            background-position: center;
-            position: absolute;
-            top: 260px;
-            width: 100%;
-            height:  380px;            
-          
+    
+            .design-body {
+    
+                position: relative;
+                // background-color: rgb(229, 255, 0);
+                width: 100%;
+    
+                height: 480px;
+    
+                .form-input-section {
+                    position: relative;
+                    z-index: 3;
+                    width: 60%;
+                }
+            }
+    
+            .form-footer-background {
+                background-position: center;
+                position: absolute;
+                top: 260px;
+                width: 100%;
+                height: 380px;
+    
+            }
+    
         }
 
     }
 
+    
+
+    // media query for desktop
+
+
+    @mixin desktop-form-section-queries-css {
+
+        @media screen and (min-width: 769px) and (max-width: 2400px) {
+
+            header {
+                .container {
+                    width: 60%;
+                    @include flexDirection(column);
+    
+                    .hero-title {
+                        display: flex;
+                        @include flexDirection(column);
+                        @include flex-x-position(start);
+                        margin-top: 164px;
+                        width: 540px;
+                        text-align: left;
+                        background-color: red;
+    
+                        h1 {
+                            font-size: 56px;
+                            line-height: 64px;
+                        }
+    
+                        p {
+                            font-size: 18px;
+                            line-height: 28px;
+                            margin: 0;
+                        }
+    
+                    }
+    
+                }
+            }
+    
+        }
+
+    }
+
+    
 
 
 
 
-}
+
+
+
+
+

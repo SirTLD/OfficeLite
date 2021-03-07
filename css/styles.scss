@@ -86,7 +86,20 @@ body {
 .cta-3 {
     color: $blue-1;
     background-color: #fff;
+    
 }
+
+// --------------------------------------------------------
+
+// media queries from signup section
+
+@include mobile-form-section-queries-css;
+@include tablet-form-section-queries-css;
+@include desktop-form-section-queries-css;
+
+// --------------------------------------------------------
+
+
 
 
 header {
@@ -384,6 +397,9 @@ header {
     background-size: cover;
 }
 
+
+// -----------------------------------------------------------------------------
+
 //media query for tablet
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -546,6 +562,9 @@ header {
         }
     }
 }
+
+
+// ----------------------------------------------------------------------------------
 
 //media query for desktop
 
@@ -765,5 +784,3 @@ header {
 }
 
 
-
-@include sign-up-css;
