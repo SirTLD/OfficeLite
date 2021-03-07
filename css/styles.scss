@@ -40,6 +40,9 @@ body {
     margin: 0 auto;
     font-family: 'Kumbh Sans', sans-serif;
     background-color: #fafafa;
+    // height: 2932px;
+    // position: relative;
+
 }
 
 
@@ -86,11 +89,10 @@ body {
 }
 
 
-
 header {
 
     .container {
-        position: relative;
+
         @include flex-x-position(center);
         @include flexDirection(column);
 
@@ -142,16 +144,19 @@ header {
     }
 }
 
+// for positioning the footer background image
+
+.design-body {
+    position: relative;
+    // background-color: red;
+
+}
+
+
+
 #membership {
     position: relative;
-    z-index: 5;
-
-    .footer-background {
-        background-image: url('/assets/home/bg-pattern-footer.svg');
-        background-repeat: none;
-        position: absolute;
-        z-index: 4;
-    }
+    z-index: 999;
 
     .membership-type {
 
@@ -189,13 +194,14 @@ header {
                 font-size: 16px;
                 font-weight: 400;
                 padding-top: 8px;
-                
-            }          
+
+            }
 
         }
-        
+
         .paragraph {
             padding-top: 50px;
+
             p {
                 padding-bottom: 32px;
                 color: $grey-3;
@@ -203,7 +209,7 @@ header {
             }
         }
 
-        
+
         .button-cta {
             margin: 0 auto;
         }
@@ -224,22 +230,23 @@ header {
     }
 }
 
-@include footer-form-section;
+@include sign-up-css;
 
 #footer {
     position: absolute;
-    background-color: $grey-2;
-    top: 1800px;
+    top: 800px;
     width: 100%;
-    height: 1248px;
+    height: 1390px;
+    background-color: $grey-2;
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-repeat: none;
     background-size: cover;
 
 
     .footer-info {
-        position: absolute;
-        top: 792px;
+        margin: 0 auto;
+        position: relative;
+        top: 850px;
         left: 0;
         right: 0;
         @include flexDirection(column);
@@ -268,6 +275,7 @@ header {
         }
 
         .footer-countdown {
+
             padding-top: 46px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -369,12 +377,10 @@ header {
 }
 
 .form-footer-background {
-    z-index: -5;
-    top: 1000px;
     background-color: $grey-2;
     width: 100%;
     height: 320px;
-    position: absolute;
+
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-size: cover;
 }
@@ -387,45 +393,169 @@ header {
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
     header {
-
         .container {
             margin: 0 auto;
             width: 90%;
             height: auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto 314px;
+            grid-auto-columns: auto;
+            grid-auto-rows: auto;
             grid-template-areas:
                 'header-1 header-1'
                 'content-1 content-2'
             ;
             justify-content: space-between;
+
+
+            .hero-logo {
+                grid-area: header-1;
+                margin-left: 2.5%;
+                margin-top: 50px;
+                margin-right: auto;
+
+            }
+
+            .hero-chart {
+                grid-area: content-2;
+                place-items: center;
+                width: 314px;
+                height: 314px;
+                transform: scale(1.5);
+                -webkit-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                -o-transform: scale(1.5);
+            }
+
+            .hero-title {
+                grid-area: content-1;
+                text-align: left;
+                place-items: start;
+
+            }
         }
 
-        .hero-logo {
-            margin-left: 2.5%;
-            margin-top: 50px;
-            grid-area: header-1;
-            margin-right: auto;
-
-        }
-
-        .hero-chart {
-            grid-area: content-2;
-
-        }
-
-        .hero-title {
-            grid-area: content-1;
-
-        }
     }
+
+    // for positioning the footer background image
+
+    .design-body {
+        position: relative;
+        
+
+    }
+
 
     #membership {
 
-        @include flexDirection(column);
-        @include flex-x-position(flex-start);
+        margin-top: 140px;
+        position: relative;
+        z-index: 999;
 
+        .membership-type {
+
+            width: 90%;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 200px 200px;
+            grid-template-areas:
+                'card-info paragraph-info'
+                'button paragraph-info'
+            ;
+
+            place-items: center;
+
+            .membership-type-card {
+                grid-area: card-info;
+                text-align: left;
+            }
+
+            .paragraph {
+                grid-area: paragraph-info;
+                text-align: left;
+                padding-bottom: 32px;
+                color: $grey-3;
+                line-height: 42px;
+            }
+
+            .button-cta {
+                grid-area: button;
+            }
+        }
+
+        .button-cta {
+            margin: 0 auto;
+        }
     }
 
+    .membership-type:nth-child(2) {
+
+        h1,
+        h3,
+        p,
+        span {
+            color: #fff;
+        }
+
+        background-color: $blue-1;
+        background-image: url('/assets/home/bg-pattern-pricing.svg');
+        background-position: center bottom;
+    }
+
+    #footer {
+        position: absolute;
+        top: 620px;
+        width: 100%;
+        height: 1200px;
+
+
+        background-image: url('/assets/home/bg-pattern-footer.svg');
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+
+
+        @include flexDirection(column);
+        @include flex-x-position(center);
+
+        background-color: $grey-2;
+
+        a {
+            padding-top: 48px;
+            text-align: center;
+        }
+
+        .footer-info {
+            // margin: 0 auto;
+            position: relative;
+            top: 300px;
+            left: 0;
+            right: 0;
+        }
+
+        .footer-countdown {
+
+            padding-top: 46px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            -moz-column-gap: 13px;
+            column-gap: 13px;
+            @include flex-x-position(center);
+            padding-bottom: 40px;
+
+            .footer-countdown-item {
+
+                width: 100px;
+                height: 128px;
+
+                span {
+                    color: #fff;
+                    font-size: 56px;
+                }
+            }
+        }
+    }
 }
+
+
