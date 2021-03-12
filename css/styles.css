@@ -53,7 +53,7 @@ body {
   background-color: #fff;
 }
 
-@media screen and (min-width: 300px) and (max-width: 480px) {
+@media screen and (min-width: 280px) {
   .hero-title-form {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -152,6 +152,7 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    margin-right: 10px;
   }
   #footer-form .footer-info-form .footer-countdown-form .footer-countdown-item span {
     color: #5175ff;
@@ -159,7 +160,7 @@ body {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) {
   header .container {
     margin: 0 auto;
     width: 90%;
@@ -259,6 +260,7 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    margin-right: 10px;
   }
   #footer-form .footer-info-form .footer-countdown-form .footer-countdown-item span {
     color: #5175ff;
@@ -283,13 +285,9 @@ body {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 2400px) {
-  body {
-    width: 100%;
-    height: 100vh;
-  }
+@media screen and (min-width: 769px) {
   header .container {
-    width: 60%;
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -299,7 +297,6 @@ body {
             flex-direction: column;
   }
   header .container .hero-title-form {
-    margin: 0 auto;
     width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -326,6 +323,7 @@ body {
   header .container .hero-title-form p {
     font-size: 18px;
     line-height: 28px;
+    margin-left: -3%;
     color: #747B95;
     margin-top: 24px;
   }
@@ -338,8 +336,8 @@ body {
     z-index: 999;
     width: 445px;
     height: 508px;
-    right: 200px;
-    top: -520px;
+    right: 100px;
+    top: -540px;
   }
   .design-body .btn {
     margin: auto 25%;
@@ -355,6 +353,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #footer-form .footer-info-form .form-footer-timer {
+    margin-left: -4%;
   }
   #footer-form .footer-info-form p {
     text-align: center;
@@ -388,7 +389,7 @@ body {
             justify-content: center;
     justify-items: center;
     padding-bottom: 40px;
-    margin-left: 3.5%;
+    margin-left: 50px;
   }
   #footer-form .footer-info-form .footer-countdown-form .footer-countdown-item {
     padding-top: 30px;
@@ -419,10 +420,16 @@ body {
     background-position: center;
     position: absolute;
     width: 430px;
-    height: 100vh;
+    height: 1550px;
     right: 0;
-    top: -750px;
+    top: -1050px;
     z-index: -1;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .footer-countdown-form {
+    margin-left: 5%;
   }
 }
 
@@ -643,6 +650,9 @@ header .container .hero-title p {
 }
 
 #footer .footer-info .footer-countdown .footer-countdown-item {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   padding-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,6 +672,7 @@ header .container .hero-title p {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  margin-left: 10px;
 }
 
 #footer .footer-info .footer-countdown .footer-countdown-item span {
@@ -894,6 +905,7 @@ header .container .hero-title p {
   #footer .footer-countdown .footer-countdown-item {
     width: 100px;
     height: 128px;
+    margin-left: 10px;
   }
   #footer .footer-countdown .footer-countdown-item span {
     color: #fff;
@@ -901,10 +913,10 @@ header .container .hero-title p {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 2400px) {
+@media screen and (min-width: 769px) {
   header .container {
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     height: auto;
     display: -ms-grid;
     display: grid;
@@ -930,11 +942,12 @@ header .container .hero-title p {
     place-items: center;
     width: auto;
     height: auto;
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    margin-left: auto;
   }
   header .container .hero-title {
     -ms-grid-row: 2;
@@ -972,7 +985,7 @@ header .container .hero-title p {
   }
   #membership {
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -986,13 +999,35 @@ header .container .hero-title p {
     z-index: 999;
   }
   #membership .membership-type {
+    margin: 0 auto;
     width: 350px;
     height: 508px;
     place-items: center;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
   }
   #membership .membership-type .membership-type-card {
     grid-area: card-info;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    padding-top: 50px;
   }
   #membership .membership-type .paragraph {
     grid-area: paragraph-info;
@@ -1005,9 +1040,15 @@ header .container .hero-title p {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: button;
-  }
-  #membership .button-cta {
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    margin-right: 38%;
   }
   .membership-type:nth-child(2) {
     background-color: #5175ff;
@@ -1023,7 +1064,7 @@ header .container .hero-title p {
   #footer {
     position: absolute;
     top: 300px;
-    width: 100%;
+    width: 100vw;
     height: 603px;
     background-image: url("/assets/home/bg-pattern-footer.svg");
     background-repeat: none;
@@ -1053,19 +1094,21 @@ header .container .hero-title p {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
         grid-template-areas: 'input input' 'clock button';
     position: relative;
     top: 120px;
-    width: 60%;
+    width: 100%;
   }
   #footer .footer-info .cta-1 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: button;
-    place-self: end;
-    margin-right: -35%;
+    margin-top: 30px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   }
   #footer .footer-info P {
     -ms-grid-row: 1;
@@ -1073,10 +1116,12 @@ header .container .hero-title p {
     -ms-grid-column-span: 2;
     grid-area: input;
     margin-right: auto;
-    margin-left: 3.5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #footer .footer-countdown {
-    width: 60%;
+    width: 100%;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: clock;
@@ -1096,14 +1141,40 @@ header .container .hero-title p {
             justify-content: center;
     justify-items: center;
     padding-bottom: 40px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: -10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #footer .footer-countdown .footer-countdown-item {
+    margin-left: 10px;
     width: 100px;
     height: 128px;
   }
   #footer .footer-countdown .footer-countdown-item span {
     color: #fff;
     font-size: 56px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header .container {
+    width: 70%;
+  }
+  #membership {
+    margin: 0 auto;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 150px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
