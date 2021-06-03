@@ -1,4 +1,4 @@
-let countDownDate = new Date('April 5, 2021').getTime();
+let countDownDate = new Date('December 5, 2021').getTime();
 
 // document.getElementById('footer-timer').innerHTML = new Date('April, 5, 2021');
 
