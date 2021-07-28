@@ -1166,11 +1166,65 @@ header .container .hero-title p {
 
 @media screen and (min-width: 1400px) {
   header .container {
-    width: 70%;
+    width: 80%;
   }
   #membership {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  header .container {
+    width: 50%;
+  }
+  #membership {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  header .container {
+    width: 45%;
+  }
+  #membership {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  header .container {
+    width: 40%;
+  }
+  #membership {
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
