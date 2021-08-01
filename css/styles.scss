@@ -102,7 +102,6 @@ body {
 
 
 header {
-
     .container {
 
         @include flex-x-position(center);
@@ -792,6 +791,19 @@ header {
 
     }
 
+}
+
+@media screen and (min-width: 1900px) {
+    header {
+        .container {
+            width: 70%;
+        }
+    }
+
+    #membership {
+        width: 70%;
+    
+}
 }
 
 
